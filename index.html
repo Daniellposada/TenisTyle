@@ -14,9 +14,32 @@
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                
+                <p class="nombreUsuario">Bienvenido, <span id="nombreUsuario"></span></p>
             </div>
-            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  
+                  const nombreUsuario = localStorage.getItem("nombreUsuario");
+          
+                  if (nombreUsuario) {
+                    
+                    document.getElementById("nombreUsuario").textContent = nombreUsuario;
+                  }
+          
+                  document
+                    .getElementById("configuracionBtn")
+                    .addEventListener("click", function (event) {
+                      event.preventDefault(); 
+          
+                      window.location.href = "login.html"; 
+                    });
+          
+                  document.getElementById("bar").addEventListener("click", function () {
+                    const navbar = document.getElementById("navbar");
+                    navbar.classList.toggle("mobile-active");
+                  });
+                });
+              </script>
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
