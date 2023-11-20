@@ -318,6 +318,9 @@ html{
     position: relative;
     bottom: 4px;
 }
+.valores{
+    color: #1CB698;
+}
 
 /* SECCION PRODUCTOS */
 .portfolio{
